@@ -54,12 +54,15 @@ const NavAndSearch: React.FC<NavAndSearchProps> = ({
             margin: "10px",
             display: "flex",
             justifyContent: "space-between",
+            flexDirection: {xs: "column", sm: "row"},
           }}
         >
-          <Box>
+          <Box sx={{
+            mb: 2,
+          }}>
             <TextField
               onChange={(e) => setSearchQuery(e.target.value)}
-              sx={{ width: { xs: "100%", sm: "100%", md: "100%" } }}
+              sx={{ width: { xs: "100%", sm: "100%", md: "100%",  } }}
               value={searchQuery}
               placeholder="Search for a country"
               variant="filled"
